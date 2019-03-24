@@ -30,7 +30,18 @@ NetBeans IDE and Java.
 - [x] Meeting 1
 - [x] Meeting 2
 - [x] Meeting 3 on 3.19
-- [ ] UML diagram
-- [ ] Workload distribution
+- [x] UML diagram
+- [x] Workload distribution
+  - Class Design: Warehouse + Cargo - Fu Junzhe
+  - Class Design: Report + Statistics - Liu Yang
+  - Class Design: Admin & Manager - Luo Qijun
+  - UI Design: Dai Chenxi
+  - Database Design
+- [ ] Class Prototype before 3.29
+- [ ] Finish programming before 4.11
+- [ ] UI design accomplished before 4.19
+- [ ] Finish report 4.30
+
+
 
 ## 5. Acknowledgement
