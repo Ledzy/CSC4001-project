@@ -13,7 +13,6 @@ public class Report {
     static int REPORT_COUNT = 0;
     int reportID;
     int cargoAmount;
-    int damageAmount = 0;
     Manager creator;            /* class Manager not declared yet */
     boolean saved = false;
     boolean confirmed = false;
@@ -58,9 +57,7 @@ public class Report {
     	this.confirmed = false; 
     }
     
-    public void assignDamage(int damage) {
-    	this.damageAmount = damage;
-    }
+
     
     public Map<String, Object> viewInfo() {
     	Map<String, Object> reportView = new HashMap<String, Object>();
