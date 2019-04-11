@@ -37,8 +37,9 @@ NetBeans IDE and Java.
   - Class Design: Admin & Manager - Luo Qijun
   - UI Design: Dai Chenxi
   - Database Design
-- [ ] Class Prototype before 3.29
-- [ ] Finish programming before 4.11
+- [x] Class Prototype before 3.29
+- [x] Meeting 4 on 4.11
+- [ ] Finish programming before 4.20
 - [ ] UI design accomplished before 4.19
 - [ ] Finish report 4.30
 
