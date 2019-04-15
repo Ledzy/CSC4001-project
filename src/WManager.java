@@ -8,14 +8,8 @@
  *
  * @author ASUS
  */
-
-//The base class of all users
-public class Manager {
-    public String username;
-    public String name;
-    
-    public Manager(String username, String name){
-    this.username = username;
-    this.name = name;
+public class WManager extends Manager{
+    public WManager(String username, String name){
+        super(username,name);
     }
 }
