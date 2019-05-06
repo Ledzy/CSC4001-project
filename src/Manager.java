@@ -14,7 +14,7 @@ public class Manager {
     public String username;
     public String name;
     
-    public Manager(String username, String name){
+    public Manager(String username){
     this.username = username;
     this.name = name;
     }

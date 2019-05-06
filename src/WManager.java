@@ -9,7 +9,8 @@
  * @author ASUS
  */
 public class WManager extends Manager{
-    public WManager(String username, String name){
-        super(username,name);
+    
+    public WManager(String username){
+        super(username);
     }
 }
