@@ -9,7 +9,7 @@
  * @author ASUS
  */
 public class Admin extends Manager{
-    public Admin(String username, String name){
-        super(username,name);
+    public Admin(String username){
+        super(username);
     }
 }

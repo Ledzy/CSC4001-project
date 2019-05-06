@@ -12,13 +12,13 @@
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class javaconnect {
+public class JavaConnect {
 Connection conn;
     public static Connection ConnecrDb(){
         try{
             Class.forName(("org.sqlite.JDBC"));
-            Connection conn = DriverManager.getConnection("jdbc:sqlite:F:\\Desktop\\Academy\\CSC4001\\project_database\\adminDB.db");
-//            Connection conn = DriverManager.getConnection("jdbc:sqlite:F:\\Desktop\\Academy\\CSC4001\\project_database\\adminDB.db");
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:src\\database\\adminDB.db");
+//            Connection conn = DriverManager.getConnection("jdbc:sqlite:..\adminDB.db");
             return conn;
         }
         catch(Exception e){

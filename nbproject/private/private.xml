@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/stock_management_system/src/javaconnect.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/stock_management_system/src/Sign_up.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/stock_management_system/src/Login.java</file>
-            <file>file:/C:/Users/ASUS/Documents/NetBeansProjects/stock_management_system/src/Forget.java</file>
+            <file>file:/E:/CSC4001-Project/src/Register.java</file>
+            <file>file:/E:/CSC4001-Project/src/Admin.java</file>
+            <file>file:/E:/CSC4001-Project/src/WManager.java</file>
+            <file>file:/E:/CSC4001-Project/src/CargoViewAdmin.java</file>
+            <file>file:/E:/CSC4001-Project/src/CargoViewManager.java</file>
+            <file>file:/E:/CSC4001-Project/src/WarehouseManagerPage.java</file>
+            <file>file:/E:/CSC4001-Project/src/CargoAction.java</file>
+            <file>file:/E:/CSC4001-Project/src/ReportWindowManager.java</file>
+            <file>file:/E:/CSC4001-Project/src/AdminPage.java</file>
+            <file>file:/E:/CSC4001-Project/src/Manager.java</file>
+            <file>file:/E:/CSC4001-Project/src/ReportWindowAdmin.java</file>
+            <file>file:/E:/CSC4001-Project/src/Report.java</file>
+            <file>file:/E:/CSC4001-Project/src/Login.java</file>
+            <file>file:/E:/CSC4001-Project/src/Forget.java</file>
         </group>
     </open-files>
 </project-private>

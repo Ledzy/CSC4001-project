@@ -1,66 +1,63 @@
-import java.util.*;
-
-/* This file implements the class Report.
- * 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
+
+import java.sql.*;
+
+
 
 /**
- * Class Report. The superclass of Import/Export/ShiftReport.
- * @author Liu Yang
+ *
+ * @author fjz
  */
 public class Report {
-	
-    static int REPORT_COUNT = 0;
-    int reportID;
-    int cargoAmount;
-    Manager creator;            /* class Manager not declared yet */
-    boolean saved = false;
-    boolean confirmed = false;
+    Connection conn;
+    private String[] columnNames;
+    private int column = 0;
+    private int row = 0;
+    Object[][] cellData;
     
-    /**
-     * Constructor
-     * @param amount The cargo amount for this order
-     * @param creator The creator of this report
-     */
-    public Report(int amount, Manager creator) {
-    	REPORT_COUNT += 1;
-    	this.reportID = REPORT_COUNT;
-    	this.cargoAmount = amount;
-    	this.creator = creator;
+    public Report(){
+        try{
+            //获取行数
+            conn = JavaConnect.ConnecrDb();
+            String sqlCountRow = "select count(*) from report";
+            Statement stmt = conn.createStatement();
+            ResultSet rrow = stmt.executeQuery(sqlCountRow);
+            if(rrow.next()){row = rrow.getInt(1);}
+            stmt.close();
+            rrow.close();
+            //获取列数
+            String sqlCountColumn = "select * from report";
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sqlCountColumn);
+            ResultSetMetaData meta = rs.getMetaData();
+            column = meta.getColumnCount();
+            stmt.close();
+            rs.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        //填入数据
+        cellData = new Object[row][column];
+        try{    
+            String sql = "select * from report";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);  
+            int count = 0;
+            while(rs.next()){
+                for (int i=1; i<=column; i++){
+                    cellData[count][i-1] = rs.getString(i);
+                }
+                count += 1;
+            }
+            stmt.close();
+            rs.close();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
     }
     
-    public int getID() {
-    	return this.reportID;
-    }
-    
-    public boolean isSaved() {
-    	return this.saved;
-    }
-    
-    public boolean isConfirmed() {
-    	return this.confirmed;
-    }
-    
-    public void setSaved() {
-    	this.saved = true; 
-    }
-    
-    public void resetSaved() {
-    	this.saved = false; 
-    }    
-    
-    public void setConfirmed() {
-    	this.confirmed = true; 
-    }
-    
-    public void resetConfirmed() {
-    	this.confirmed = false; 
-    }
-    
-
-    
-    public Map<String, Object> viewInfo() {
-    	Map<String, Object> reportView = new HashMap<String, Object>();
-    	return reportView;
-    }
 }
